@@ -113,7 +113,7 @@ export default function Home() {
             <p style={{ fontSize: "clamp(1rem, 1.4vw, 1.125rem)", fontWeight: 300, color: "#7a7570", lineHeight: 1.8, marginBottom: "1.5rem" }}>
               Jag studerar UX-design på Stockholms Tekniska Institut med bakgrund inom digital kommunikation och sociala medier. Jag trivs i hela designprocessen – från tidiga intervjuer till testade prototyper – och gillar när research leder till design som faktiskt gör skillnad för användaren.
             </p>
-            <a href="https://www.sti.se/utbildningar/ux-designer/" target="_blank" style={{ fontSize: "0.875rem", fontWeight: 400, color: "#c8633a", textDecoration: "none", borderBottom: "1px solid #c8633a", paddingBottom: "2px", display: "inline-block" }}>
+            <a href="https://www.sti.se/yh-utbildningar/ux-designer/" target="_blank" style={{ fontSize: "0.875rem", fontWeight: 400, color: "#c8633a", textDecoration: "none", borderBottom: "1px solid #c8633a", paddingBottom: "2px", display: "inline-block" }}>
               Läs mer om utbildningen →
             </a>
           </div>
