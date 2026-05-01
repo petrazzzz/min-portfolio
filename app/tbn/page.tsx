@@ -271,7 +271,7 @@ export default function TBN() {
             <a href="https://www.figma.com/proto/UQzA04Cr4elZgIZEPzYUNW/TBN-Homepage--Copy-?node-id=0-1&t=NCjRfTw3LASp82IH-1" target="_blank" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", padding: "0.75rem 2rem", background: "#c8633a", color: "#fff", border: "1.5px solid #c8633a", borderRadius: "2px", fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.06em", textTransform: "uppercase", textDecoration: "none" }}>
               Se prototyp i Figma →
             </a>
-            <a href="https://drive.google.com/file/d/1hzQWzn7HzXDJLdBG3fJZVT46Dam2Uvw2/view?usp=sharing" target="_blank" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", padding: "0.75rem 2rem", background: "transparent", color: "#1a1814", border: "1.5px solid #e2ded9", borderRadius: "2px", fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.06em", textTransform: "uppercase", textDecoration: "none" }}>
+            <a href="https://canva.link/gx0rh326casg3dv" target="_blank" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", padding: "0.75rem 2rem", background: "transparent", color: "#1a1814", border: "1.5px solid #e2ded9", borderRadius: "2px", fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.06em", textTransform: "uppercase", textDecoration: "none" }}>
               Se processdokumentation →
             </a>
           </div>
