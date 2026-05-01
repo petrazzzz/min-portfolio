@@ -179,7 +179,7 @@ export default function Home() {
             </p>
             <div style={{ display: "flex", gap: "1rem" }}>
               <a href="mailto:petra.frisk@stud.sti.se" className="btn-primary">Maila mig</a>
-              <a href="https://www.linkedin.com/in/petra-frisk-35428014a/" target="_blank" className="btn-primary">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/petra-frisk-35428014a/" target="_blank" rel="noopener noreferrer" className="btn-primary">LinkedIn</a>
             </div>
           </div>
         </div>
