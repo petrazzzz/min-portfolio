@@ -148,6 +148,7 @@ export default function Home() {
                 className="projekt-bild"
                 width={800}
                 height={500}
+                sizes="380px"
                 style={{ width: "100%", height: "auto", display: "block" }}
               />
             </div>
