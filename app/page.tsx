@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -88,10 +89,12 @@ export default function Home() {
         </div>
 
         <div className="hero-bild-wrapper">
-          <img
+          <Image
             src="/petrafrisk_profilbild.png"
             alt="Petra Frisk"
             className="hero-bild"
+            width={340}
+            height={440}
           />
         </div>
       </section>
@@ -139,11 +142,13 @@ export default function Home() {
         <div style={{ maxWidth: "380px" }}>
           <a href="/tbn" className="projekt-kort" style={{ textDecoration: "none", color: "inherit", display: "block", border: "1px solid #e2ded9", borderRadius: "6px", overflow: "hidden" }}>
             <div style={{ overflow: "hidden" }}>
-              <img
+              <Image
                 src="/tbn_startsida.png"
                 alt="TBN Atlantic Rainforest"
                 className="projekt-bild"
-                style={{ width: "100%", display: "block" }}
+                width={800}
+                height={500}
+                style={{ width: "100%", height: "auto", display: "block" }}
               />
             </div>
             <div style={{ padding: "1.5rem" }}>

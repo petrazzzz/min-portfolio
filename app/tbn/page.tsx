@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function TBN() {
   const [aktiv, setAktiv] = useState(0);
@@ -77,7 +78,7 @@ export default function TBN() {
             Uppdraget var att utforska hur hemsidan kunde bli tydligare, mer trovärdig och mer engagerande – för både företag och privatpersoner som vill bidra till ett konkret miljöarbete.
           </p>
           <figure style={{ margin: 0 }}>
-            <img src="/TBN_befintlig_hemsida.png" alt="TBN:s befintliga hemsida" style={{ width: "100%", borderRadius: "6px", display: "block", border: "1px solid #e2ded9" }} />
+            <Image src="/TBN_befintlig_hemsida.png" alt="TBN:s befintliga hemsida" width={1200} height={750} style={{ width: "100%", height: "auto", borderRadius: "6px", display: "block", border: "1px solid #e2ded9" }} />
             <figcaption style={{ fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.08em", textTransform: "uppercase", color: "#7a7570", marginTop: "0.75rem" }}>TBN:s befintliga hemsida</figcaption>
           </figure>
         </div>
@@ -97,7 +98,7 @@ export default function TBN() {
           </p>
           <div style={{ position: "relative" }}>
             <div style={{ borderRadius: "6px", overflow: "hidden" }}>
-              <img src={bilder[aktiv].src} alt={bilder[aktiv].alt} style={{ width: "100%", display: "block" }} />
+              <Image src={bilder[aktiv].src} alt={bilder[aktiv].alt} width={1200} height={800} style={{ width: "100%", height: "auto", display: "block" }} />
             </div>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "1rem" }}>
               <button onClick={() => setAktiv((aktiv - 1 + bilder.length) % bilder.length)} style={{ background: "#1a1814", color: "#fff", border: "none", cursor: "pointer", width: "40px", height: "40px", borderRadius: "50%", fontSize: "1rem", display: "flex", alignItems: "center", justifyContent: "center" }}>←</button>
@@ -202,7 +203,7 @@ export default function TBN() {
                   <button onClick={() => setAktivKoncept((aktivKoncept + 1) % koncept.length)} style={{ background: "#1a1814", color: "#fff", border: "none", cursor: "pointer", width: "40px", height: "40px", borderRadius: "50%", fontSize: "1rem", display: "flex", alignItems: "center", justifyContent: "center" }}>→</button>
                 </div>
               </div>
-              <img src={k.bild} alt={k.titel} style={{ width: "100%", borderRadius: "6px", display: "block" }} />
+              <Image src={k.bild} alt={k.titel} width={1200} height={750} style={{ width: "100%", height: "auto", borderRadius: "6px", display: "block" }} />
             </div>
             </div>
           );
