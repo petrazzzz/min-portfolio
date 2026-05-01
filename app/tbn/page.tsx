@@ -97,8 +97,10 @@ export default function TBN() {
             Genom intervjuer med 9 respondenter från olika företag identifierade vi återkommande problem med den befintliga hemsidan – brister som påverkade trovärdighet, tydlighet och användarupplevelsen.
           </p>
           <div style={{ position: "relative" }}>
-            <div style={{ borderRadius: "6px", overflow: "hidden" }}>
-              <Image src={bilder[aktiv].src} alt={bilder[aktiv].alt} width={1200} height={800} style={{ width: "100%", height: "auto", display: "block" }} />
+            <div style={{ borderRadius: "6px", overflow: "hidden", position: "relative" }}>
+              {bilder.map((bild, i) => (
+                <Image key={bild.src} src={bild.src} alt={bild.alt} width={1200} height={800} priority style={{ width: "100%", height: "auto", display: "block", position: i === 0 ? "relative" : "absolute", top: 0, left: 0, opacity: i === aktiv ? 1 : 0, transition: "opacity 0.3s ease" }} />
+              ))}
             </div>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "1rem" }}>
               <button onClick={() => setAktiv((aktiv - 1 + bilder.length) % bilder.length)} style={{ background: "#1a1814", color: "#fff", border: "none", cursor: "pointer", width: "40px", height: "40px", borderRadius: "50%", fontSize: "1rem", display: "flex", alignItems: "center", justifyContent: "center" }}>←</button>
@@ -203,7 +205,11 @@ export default function TBN() {
                   <button onClick={() => setAktivKoncept((aktivKoncept + 1) % koncept.length)} style={{ background: "#1a1814", color: "#fff", border: "none", cursor: "pointer", width: "40px", height: "40px", borderRadius: "50%", fontSize: "1rem", display: "flex", alignItems: "center", justifyContent: "center" }}>→</button>
                 </div>
               </div>
-              <Image src={k.bild} alt={k.titel} width={1200} height={750} style={{ width: "100%", height: "auto", borderRadius: "6px", display: "block" }} />
+              <div style={{ position: "relative" }}>
+                {koncept.map((item, i) => (
+                  <Image key={item.bild} src={item.bild} alt={item.titel} width={1200} height={750} priority style={{ width: "100%", height: "auto", borderRadius: "6px", display: "block", position: i === 0 ? "relative" : "absolute", top: 0, left: 0, opacity: i === aktivKoncept ? 1 : 0, transition: "opacity 0.3s ease" }} />
+                ))}
+              </div>
             </div>
             </div>
           );
