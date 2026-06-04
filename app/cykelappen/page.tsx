@@ -282,8 +282,8 @@ export default function Cykelappen() {
             </p>
           </div>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <a href="https://www.figma.com/design/u4B8U6aLaVH2ariD1SZl9a/Petra-HJPR-prototype--Copy-?node-id=2021-1681&t=MgLHK2qxBAYIRCpC-1" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", padding: "0.75rem 2rem", background: "#c8633a", color: "#fff", border: "1.5px solid #c8633a", borderRadius: "2px", fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.06em", textTransform: "uppercase", textDecoration: "none" }}>
-              Se prototyp i Figma →
+            <a href="https://www.figma.com/proto/u4B8U6aLaVH2ariD1SZl9a/Petra-HJPR-prototype--Copy-?node-id=2021-2231&viewport=-50%2C76%2C0.22&t=lIhF766jutlgH1PX-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2021%3A2231&page-id=2021%3A1681" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", padding: "0.75rem 2rem", background: "#c8633a", color: "#fff", border: "1.5px solid #c8633a", borderRadius: "2px", fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.06em", textTransform: "uppercase", textDecoration: "none" }}>
+              Testa prototypen i Figma →
             </a>
           </div>
         </div>
