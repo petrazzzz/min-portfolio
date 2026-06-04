@@ -139,23 +139,41 @@ export default function Home() {
           <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#c8633a", display: "inline-block", flexShrink: 0 }} />
           Projekt
         </p>
-        <div style={{ maxWidth: "380px" }}>
+        <div style={{ maxWidth: "800px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem" }}>
           <a href="/tbn" className="projekt-kort" style={{ textDecoration: "none", color: "inherit", display: "block", border: "1px solid #e2ded9", borderRadius: "6px", overflow: "hidden" }}>
-            <div style={{ overflow: "hidden" }}>
+            <div style={{ overflow: "hidden", height: "340px" }}>
               <Image
                 src="/tbn_startsida.png"
                 alt="TBN Atlantic Rainforest"
                 className="projekt-bild"
                 width={800}
                 height={500}
-                sizes="380px"
-                style={{ width: "100%", height: "auto", display: "block" }}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               />
             </div>
             <div style={{ padding: "1.5rem" }}>
               <p style={{ fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8633a", margin: "0 0 0.5rem" }}>UX Research · Tjänstedesign</p>
               <h3 className="projekt-titel" style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: "1.5rem", fontWeight: 400, margin: "0 0 0.5rem" }}>TBN Atlantic Rainforest</h3>
               <p className="projekt-beskrivning" style={{ fontSize: "0.875rem", fontWeight: 300, margin: 0, lineHeight: 1.7 }}>Omdesign av hemsida för en klimatorganisation med fokus på trovärdighet och engagemang.</p>
+            </div>
+          </a>
+          <a href="/cykelappen" className="projekt-kort" style={{ textDecoration: "none", color: "inherit", display: "block", border: "1px solid #e2ded9", borderRadius: "6px", overflow: "hidden" }}>
+            <div style={{ overflow: "hidden", height: "340px" }}>
+              <Image
+                src="/cykel_startsida.png"
+                alt="Cykelappen"
+                className="projekt-bild"
+                width={1086}
+                height={1448}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              />
+            </div>
+            <div style={{ padding: "1.5rem" }}>
+              <p style={{ fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8633a", margin: "0 0 0.5rem" }}>Interaktionsdesign · UX Research</p>
+              <h3 className="projekt-titel" style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: "1.5rem", fontWeight: 400, margin: "0 0 0.5rem" }}>Cykelappen</h3>
+              <p className="projekt-beskrivning" style={{ fontSize: "0.875rem", fontWeight: 300, margin: 0, lineHeight: 1.7 }}>En app som gör cyklingen enklare, tryggare och mer inkluderande – för alla.</p>
             </div>
           </a>
         </div>
