@@ -120,11 +120,11 @@ export default function Home() {
               Kompetenser
             </p>
             <p style={{ fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.1em", textTransform: "uppercase", color: "#7a7570", margin: "0 0 0.5rem" }}>Verktyg</p>
-            {["Figma", "Canva", "HTML/CSS"].map((skill) => (
+            {["Figma", "Canva", "HTML/CSS", "Claude"].map((skill) => (
               <div key={skill} className="skill-item">{skill}</div>
             ))}
             <p style={{ fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.1em", textTransform: "uppercase", color: "#7a7570", margin: "1.5rem 0 0.5rem" }}>Metoder</p>
-            {["Wireframing", "Användartestning", "Interaktionsdesign", "Tjänstedesign"].map((skill) => (
+            {["Wireframing", "Användartestning", "Interaktionsdesign", "Tillgänglighet (WCAG)"].map((skill) => (
               <div key={skill} className="skill-item">{skill}</div>
             ))}
           </div>
