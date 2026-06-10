@@ -22,16 +22,16 @@ export default function TBN() {
         background: "rgba(255,255,255,0.92)", backdropFilter: "blur(12px)",
         boxShadow: "0 1px 0 #e2ded9", zIndex: 100, boxSizing: "border-box"
       }}>
-        <Link href="/" style={{ display: "flex", alignItems: "center", gap: "1.25rem", textDecoration: "none" }}>
-          <span style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: "1.125rem", fontWeight: 400, letterSpacing: "0.02em", fontStyle: "normal", color: "#1a1814" }}>Petra Frisk / Portfolio</span>
-          <span style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.06em", textTransform: "uppercase", color: "#7a7570", border: "1px solid #e2ded9", borderRadius: "999px", padding: "0.3rem 0.85rem" }}>
+        <Link href="/" className="flex items-center gap-2 sm:gap-5" style={{ textDecoration: "none" }}>
+          <span className="text-xs sm:text-sm md:text-base lg:text-lg" style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontWeight: 400, letterSpacing: "0.02em", fontStyle: "normal", color: "#1a1814" }}>Petra Frisk / Portfolio</span>
+          <span className="hidden sm:flex" style={{ alignItems: "center", gap: "0.4rem", fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.06em", textTransform: "uppercase", color: "#7a7570", border: "1px solid #e2ded9", borderRadius: "999px", padding: "0.3rem 0.85rem" }}>
             <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#4caf50", display: "inline-block", flexShrink: 0 }} />
             öppen för LIA
           </span>
         </Link>
-        <div style={{ display: "flex", gap: "2rem" }}>
+        <div className="flex gap-3 sm:gap-8">
           {[["Projekt", "/#projekt"], ["Om mig", "/#ommig"], ["Kontakt", "/#kontakt"]].map(([label, href]) => (
-            <Link key={label} href={href} style={{ fontSize: "0.875rem", fontWeight: 400, letterSpacing: "0.06em", textTransform: "uppercase", color: "#7a7570", textDecoration: "none" }}>{label}</Link>
+            <Link key={label} href={href} className="text-xs sm:text-sm" style={{ fontWeight: 400, letterSpacing: "0.06em", textTransform: "uppercase", color: "#7a7570", textDecoration: "none" }}>{label}</Link>
           ))}
         </div>
       </nav>
@@ -41,13 +41,13 @@ export default function TBN() {
         <p style={{ fontSize: "0.875rem", fontWeight: 400, letterSpacing: "0.1em", textTransform: "uppercase", color: "#c8633a", marginBottom: "1.5rem" }}>
           Case study / UX Design
         </p>
-        <h1 style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: "clamp(3rem, 6vw, 6.5rem)", fontWeight: 300, lineHeight: 1.08, letterSpacing: "-0.02em", marginBottom: "2rem", maxWidth: "20ch" }}>
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl" style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontWeight: 300, lineHeight: 1.08, letterSpacing: "-0.02em", marginBottom: "2rem", maxWidth: "20ch" }}>
           TBN Atlantic Rainforest
         </h1>
         <p style={{ fontSize: "clamp(1rem, 1.8vw, 1.375rem)", fontWeight: 300, color: "#7a7570", lineHeight: 1.7, maxWidth: "60ch", marginBottom: "3rem" }}>
           En redesign av en klimatorganisations hemsida med fokus på tydligare informationsarkitektur, starkare trovärdighet och mer engagerande storytelling.
         </p>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "2rem", paddingTop: "2rem", borderTop: "1px solid #e2ded9" }}>
+        <div className="gap-6 sm:gap-8" style={{ display: "flex", flexWrap: "wrap", paddingTop: "2rem", borderTop: "1px solid #e2ded9" }}>
           {[
             { label: "Roll", värde: "UX Designer" },
             { label: "Typ", värde: "Grupprojekt" },
@@ -63,8 +63,8 @@ export default function TBN() {
       </section>
 
       {/* Översikt */}
-      <section style={{ padding: "4rem clamp(1.5rem, 5vw, 4rem)", maxWidth: "1320px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 3fr", gap: "4rem", alignItems: "start", borderBottom: "1px solid #e2ded9" }}>
-        <div style={{ position: "sticky", top: "calc(4rem + 1.5rem)" }}>
+      <section className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-8 md:gap-16" style={{ padding: "4rem clamp(1.5rem, 5vw, 4rem)", maxWidth: "1320px", margin: "0 auto", alignItems: "start", borderBottom: "1px solid #e2ded9" }}>
+        <div className="static md:sticky md:top-[calc(4rem+1.5rem)]">
           <p style={{ fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8633a", marginBottom: "0.75rem" }}>Översikt</p>
           <h2 style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: "clamp(1.375rem, 2vw, 2rem)", fontWeight: 300, lineHeight: 1.2, letterSpacing: "-0.01em", color: "#1a1814" }}>
             Att skapa en mer trovärdig och engagerande upplevelse
@@ -85,8 +85,8 @@ export default function TBN() {
       </section>
 
       {/* Nulägesanalys */}
-      <section style={{ padding: "4rem clamp(1.5rem, 5vw, 4rem)", maxWidth: "1320px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 3fr", gap: "4rem", alignItems: "start", borderBottom: "1px solid #e2ded9" }}>
-        <div style={{ position: "sticky", top: "calc(4rem + 1.5rem)" }}>
+      <section className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-8 md:gap-16" style={{ padding: "4rem clamp(1.5rem, 5vw, 4rem)", maxWidth: "1320px", margin: "0 auto", alignItems: "start", borderBottom: "1px solid #e2ded9" }}>
+        <div className="static md:sticky md:top-[calc(4rem+1.5rem)]">
           <p style={{ fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8633a", marginBottom: "0.75rem" }}>Nulägesanalys</p>
           <h2 style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: "clamp(1.375rem, 2vw, 2rem)", fontWeight: 300, lineHeight: 1.2, letterSpacing: "-0.01em", color: "#1a1814" }}>
             Utmaningar i den befintliga upplevelsen
@@ -119,8 +119,8 @@ export default function TBN() {
       </section>
 
       {/* Research & Insikter */}
-      <section style={{ padding: "4rem clamp(1.5rem, 5vw, 4rem)", maxWidth: "1320px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 3fr", gap: "4rem", alignItems: "start", borderBottom: "1px solid #e2ded9" }}>
-        <div style={{ position: "sticky", top: "calc(4rem + 1.5rem)" }}>
+      <section className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-8 md:gap-16" style={{ padding: "4rem clamp(1.5rem, 5vw, 4rem)", maxWidth: "1320px", margin: "0 auto", alignItems: "start", borderBottom: "1px solid #e2ded9" }}>
+        <div className="static md:sticky md:top-[calc(4rem+1.5rem)]">
           <p style={{ fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8633a", marginBottom: "0.75rem" }}>Research & Insikter</p>
           <h2 style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: "clamp(1.375rem, 2vw, 2rem)", fontWeight: 300, lineHeight: 1.2, letterSpacing: "-0.01em", color: "#1a1814" }}>
             Från intervjuer till designriktning
@@ -150,7 +150,7 @@ export default function TBN() {
             <p style={{ fontSize: "clamp(1rem, 1.4vw, 1.125rem)", fontWeight: 300, color: "#7a7570", lineHeight: 1.8, marginBottom: "1.5rem" }}>
               Utifrån insikterna identifierade vi två beteendetyper som designen behövde tillgodose.
             </p>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5rem" }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
                 { typ: "Den evidensorienterade", text: "Fattar beslut utifrån fakta och data. Söker verifierbar information och tredjepartsgranskning innan förtroende byggs.", drivkraft: "Välgrundade beslut utifrån rådata" },
                 { typ: "Den känslodrivna", text: "Motiveras av empati och värderingar. Drivs av engagemang för miljö och hållbarhet och vill se verklig förändring.", drivkraft: "Se faktisk förändring, agera i linje med sina värderingar" },
@@ -168,7 +168,7 @@ export default function TBN() {
 
       {/* Design & Koncept */}
       <section style={{ padding: "4rem clamp(1.5rem, 5vw, 4rem)", maxWidth: "1320px", margin: "0 auto", borderBottom: "1px solid #e2ded9" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 3fr", gap: "4rem", marginBottom: "3rem" }}>
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-8 md:gap-16" style={{ marginBottom: "3rem" }}>
           <div>
             <p style={{ fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8633a", marginBottom: "0.75rem" }}>Design & Koncept</p>
             <h2 style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: "clamp(1.375rem, 2vw, 2rem)", fontWeight: 300, lineHeight: 1.2, letterSpacing: "-0.01em", color: "#1a1814" }}>
@@ -188,7 +188,7 @@ export default function TBN() {
           const k = koncept[aktivKoncept];
           return (
             <div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 3fr", gap: "4rem", alignItems: "stretch" }}>
+            <div className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-8 md:gap-16" style={{ alignItems: "stretch" }}>
               <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
                 <div>
                   <p style={{ fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8633a", marginBottom: "0.75rem" }}>Koncept {aktivKoncept + 1} / {koncept.length}</p>
@@ -217,8 +217,8 @@ export default function TBN() {
       </section>
 
       {/* Användbarhetstester */}
-      <section style={{ padding: "4rem clamp(1.5rem, 5vw, 4rem)", maxWidth: "1320px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 3fr", gap: "4rem", alignItems: "start", borderBottom: "1px solid #e2ded9" }}>
-        <div style={{ position: "sticky", top: "calc(4rem + 1.5rem)" }}>
+      <section className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-8 md:gap-16" style={{ padding: "4rem clamp(1.5rem, 5vw, 4rem)", maxWidth: "1320px", margin: "0 auto", alignItems: "start", borderBottom: "1px solid #e2ded9" }}>
+        <div className="static md:sticky md:top-[calc(4rem+1.5rem)]">
           <p style={{ fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8633a", marginBottom: "0.75rem" }}>Användbarhetstester</p>
           <h2 style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: "clamp(1.375rem, 2vw, 2rem)", fontWeight: 300, lineHeight: 1.2, letterSpacing: "-0.01em", color: "#1a1814" }}>
             Testa, lära och förbättra
@@ -243,8 +243,8 @@ export default function TBN() {
       </section>
 
       {/* Resultat */}
-      <section style={{ padding: "4rem clamp(1.5rem, 5vw, 4rem)", maxWidth: "1320px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 3fr", gap: "4rem", alignItems: "start", borderBottom: "1px solid #e2ded9" }}>
-        <div style={{ position: "sticky", top: "calc(4rem + 1.5rem)" }}>
+      <section className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-8 md:gap-16" style={{ padding: "4rem clamp(1.5rem, 5vw, 4rem)", maxWidth: "1320px", margin: "0 auto", alignItems: "start", borderBottom: "1px solid #e2ded9" }}>
+        <div className="static md:sticky md:top-[calc(4rem+1.5rem)]">
           <p style={{ fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8633a", marginBottom: "0.75rem" }}>Resultat</p>
           <h2 style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: "clamp(1.375rem, 2vw, 2rem)", fontWeight: 300, lineHeight: 1.2, letterSpacing: "-0.01em", color: "#1a1814" }}>
             En mer tydlig, engagerande och förtroendeingivande riktning
@@ -285,7 +285,7 @@ export default function TBN() {
       </section>
 
       {/* Footer */}
-      <footer style={{ padding: "2rem clamp(1.5rem, 5vw, 4rem)", borderTop: "1px solid #e2ded9", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+      <footer className="flex-col sm:flex-row justify-between items-start sm:items-center gap-4" style={{ padding: "2rem clamp(1.5rem, 5vw, 4rem)", borderTop: "1px solid #e2ded9", display: "flex" }}>
         <span style={{ fontSize: "0.75rem", fontWeight: 400, color: "#7a7570", letterSpacing: "0.05em" }}>2026 Petra Frisk</span>
         <Link href="/" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", padding: "0.75rem 2rem", background: "transparent", color: "#1a1814", border: "1.5px solid #e2ded9", borderRadius: "2px", fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.06em", textTransform: "uppercase", textDecoration: "none" }}>
           ← Tillbaka till projekt

@@ -35,16 +35,16 @@ export default function Cykelappen() {
         background: "rgba(255,255,255,0.92)", backdropFilter: "blur(12px)",
         boxShadow: "0 1px 0 #e2ded9", zIndex: 100, boxSizing: "border-box"
       }}>
-        <Link href="/" style={{ display: "flex", alignItems: "center", gap: "1.25rem", textDecoration: "none" }}>
-          <span style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: "1.125rem", fontWeight: 400, letterSpacing: "0.02em", fontStyle: "normal", color: "#1a1814" }}>Petra Frisk / Portfolio</span>
-          <span style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.06em", textTransform: "uppercase", color: "#7a7570", border: "1px solid #e2ded9", borderRadius: "999px", padding: "0.3rem 0.85rem" }}>
+        <Link href="/" className="flex items-center gap-2 sm:gap-5" style={{ textDecoration: "none" }}>
+          <span className="text-xs sm:text-sm md:text-base lg:text-lg" style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontWeight: 400, letterSpacing: "0.02em", fontStyle: "normal", color: "#1a1814" }}>Petra Frisk / Portfolio</span>
+          <span className="hidden sm:flex" style={{ alignItems: "center", gap: "0.4rem", fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.06em", textTransform: "uppercase", color: "#7a7570", border: "1px solid #e2ded9", borderRadius: "999px", padding: "0.3rem 0.85rem" }}>
             <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#4caf50", display: "inline-block", flexShrink: 0 }} />
             öppen för LIA
           </span>
         </Link>
-        <div style={{ display: "flex", gap: "2rem" }}>
+        <div className="flex gap-3 sm:gap-8">
           {[["Projekt", "/#projekt"], ["Om mig", "/#ommig"], ["Kontakt", "/#kontakt"]].map(([label, href]) => (
-            <Link key={label} href={href} style={{ fontSize: "0.875rem", fontWeight: 400, letterSpacing: "0.06em", textTransform: "uppercase", color: "#7a7570", textDecoration: "none" }}>{label}</Link>
+            <Link key={label} href={href} className="text-xs sm:text-sm" style={{ fontWeight: 400, letterSpacing: "0.06em", textTransform: "uppercase", color: "#7a7570", textDecoration: "none" }}>{label}</Link>
           ))}
         </div>
       </nav>
@@ -54,13 +54,13 @@ export default function Cykelappen() {
         <p style={{ fontSize: "0.875rem", fontWeight: 400, letterSpacing: "0.1em", textTransform: "uppercase", color: "#c8633a", marginBottom: "1.5rem" }}>
           Case study / Interaktionsdesign
         </p>
-        <h1 style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: "clamp(3rem, 6vw, 6.5rem)", fontWeight: 300, lineHeight: 1.08, letterSpacing: "-0.02em", marginBottom: "2rem", maxWidth: "20ch" }}>
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl" style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontWeight: 300, lineHeight: 1.08, letterSpacing: "-0.02em", marginBottom: "2rem", maxWidth: "20ch" }}>
           Cykelappen
         </h1>
         <p style={{ fontSize: "clamp(1rem, 1.8vw, 1.375rem)", fontWeight: 300, color: "#7a7570", lineHeight: 1.7, maxWidth: "60ch", marginBottom: "3rem" }}>
           En app som gör cyklingen enklare, tryggare och mer inkluderande – för alla cyklister i Sverige.
         </p>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "2rem", paddingTop: "2rem", borderTop: "1px solid #e2ded9" }}>
+        <div className="gap-6 sm:gap-8" style={{ display: "flex", flexWrap: "wrap", paddingTop: "2rem", borderTop: "1px solid #e2ded9" }}>
           {[
             { label: "Roll", värde: "UX Designer" },
             { label: "Typ", värde: "Grupprojekt" },
@@ -76,8 +76,8 @@ export default function Cykelappen() {
       </section>
 
       {/* Översikt */}
-      <section style={{ padding: "4rem clamp(1.5rem, 5vw, 4rem)", maxWidth: "1320px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 3fr", gap: "4rem", alignItems: "start", borderBottom: "1px solid #e2ded9" }}>
-        <div style={{ position: "sticky", top: "calc(4rem + 1.5rem)" }}>
+      <section className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-8 md:gap-16" style={{ padding: "4rem clamp(1.5rem, 5vw, 4rem)", maxWidth: "1320px", margin: "0 auto", alignItems: "start", borderBottom: "1px solid #e2ded9" }}>
+        <div className="static md:sticky md:top-[calc(4rem+1.5rem)]">
           <p style={{ fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8633a", marginBottom: "0.75rem" }}>Översikt</p>
           <h2 style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: "clamp(1.375rem, 2vw, 2rem)", fontWeight: 300, lineHeight: 1.2, letterSpacing: "-0.01em", color: "#1a1814" }}>
             Att skapa trygghet och gemenskap för alla cyklister
@@ -94,8 +94,8 @@ export default function Cykelappen() {
       </section>
 
       {/* Research & Insikter */}
-      <section style={{ padding: "4rem clamp(1.5rem, 5vw, 4rem)", maxWidth: "1320px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 3fr", gap: "4rem", alignItems: "start", borderBottom: "1px solid #e2ded9" }}>
-        <div style={{ position: "sticky", top: "calc(4rem + 1.5rem)" }}>
+      <section className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-8 md:gap-16" style={{ padding: "4rem clamp(1.5rem, 5vw, 4rem)", maxWidth: "1320px", margin: "0 auto", alignItems: "start", borderBottom: "1px solid #e2ded9" }}>
+        <div className="static md:sticky md:top-[calc(4rem+1.5rem)]">
           <p style={{ fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8633a", marginBottom: "0.75rem" }}>Research & Insikter</p>
           <h2 style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: "clamp(1.375rem, 2vw, 2rem)", fontWeight: 300, lineHeight: 1.2, letterSpacing: "-0.01em", color: "#1a1814" }}>
             Från 9 intervjuer till tre bärande insikter
@@ -138,14 +138,14 @@ export default function Cykelappen() {
       </section>
 
       {/* Personas */}
-      <section style={{ padding: "4rem clamp(1.5rem, 5vw, 4rem)", maxWidth: "1320px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 3fr", gap: "4rem", alignItems: "start", borderBottom: "1px solid #e2ded9" }}>
-        <div style={{ position: "sticky", top: "calc(4rem + 1.5rem)" }}>
+      <section className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-8 md:gap-16" style={{ padding: "4rem clamp(1.5rem, 5vw, 4rem)", maxWidth: "1320px", margin: "0 auto", alignItems: "start", borderBottom: "1px solid #e2ded9" }}>
+        <div className="static md:sticky md:top-[calc(4rem+1.5rem)]">
           <p style={{ fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8633a", marginBottom: "0.75rem" }}>Personas</p>
           <h2 style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: "clamp(1.375rem, 2vw, 2rem)", fontWeight: 300, lineHeight: 1.2, letterSpacing: "-0.01em", color: "#1a1814" }}>
             Två cyklister, två perspektiv
           </h2>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5rem" }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {[
             {
               namn: "Luca",
@@ -181,7 +181,7 @@ export default function Cykelappen() {
 
       {/* Design & Koncept */}
       <section style={{ padding: "4rem clamp(1.5rem, 5vw, 4rem)", maxWidth: "1320px", margin: "0 auto", borderBottom: "1px solid #e2ded9" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 3fr", gap: "4rem", marginBottom: "3rem" }}>
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-8 md:gap-16" style={{ marginBottom: "3rem" }}>
           <div>
             <p style={{ fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8633a", marginBottom: "0.75rem" }}>Design & Koncept</p>
             <h2 style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: "clamp(1.375rem, 2vw, 2rem)", fontWeight: 300, lineHeight: 1.2, letterSpacing: "-0.01em", color: "#1a1814" }}>
@@ -192,7 +192,7 @@ export default function Cykelappen() {
             Utifrån research och personas tog vi fram tre kärnkoncept som tillsammans bildar Cykelappens upplevelse. Fokus låg på att skapa ett gränssnitt som är enkelt nog för Magda men tillräckligt snabbt för Luca.
           </p>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 3fr", gap: "4rem", alignItems: "stretch" }}>
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-8 md:gap-16" style={{ alignItems: "stretch" }}>
           <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
             <div>
               <p style={{ fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8633a", marginBottom: "0.75rem" }}>Koncept {aktivKoncept + 1} / {koncept.length}</p>
@@ -210,9 +210,9 @@ export default function Cykelappen() {
             </div>
           </div>
           <div style={{ display: "flex", justifyContent: "center", alignItems: "flex-start" }}>
-            <div style={{ position: "relative", width: "320px", height: "570px", flexShrink: 0 }}>
+            <div className="w-full max-w-[320px]" style={{ position: "relative", aspectRatio: "320 / 570", flexShrink: 0 }}>
               {koncept.map((item, i) => (
-                <div key={item.titel} style={{ width: "320px", height: "570px", borderRadius: "6px", overflow: "hidden", background: item.bild ? "transparent" : "#f7f5f2", display: "flex", alignItems: "center", justifyContent: "center", position: "absolute", top: 0, left: 0, opacity: i === aktivKoncept ? 1 : 0 }}>
+                <div key={item.titel} className="w-full h-full" style={{ borderRadius: "6px", overflow: "hidden", background: item.bild ? "transparent" : "#f7f5f2", display: "flex", alignItems: "center", justifyContent: "center", position: "absolute", top: 0, left: 0, opacity: i === aktivKoncept ? 1 : 0 }}>
                   {item.bild ? (
                     <Image src={item.bild} alt={item.titel} width={560} height={1000} style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }} />
                   ) : (
@@ -226,8 +226,8 @@ export default function Cykelappen() {
       </section>
 
       {/* Testresultat */}
-      <section style={{ padding: "4rem clamp(1.5rem, 5vw, 4rem)", maxWidth: "1320px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 3fr", gap: "4rem", alignItems: "start", borderBottom: "1px solid #e2ded9" }}>
-        <div style={{ position: "sticky", top: "calc(4rem + 1.5rem)" }}>
+      <section className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-8 md:gap-16" style={{ padding: "4rem clamp(1.5rem, 5vw, 4rem)", maxWidth: "1320px", margin: "0 auto", alignItems: "start", borderBottom: "1px solid #e2ded9" }}>
+        <div className="static md:sticky md:top-[calc(4rem+1.5rem)]">
           <p style={{ fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8633a", marginBottom: "0.75rem" }}>Testresultat</p>
           <h2 style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: "clamp(1.375rem, 2vw, 2rem)", fontWeight: 300, lineHeight: 1.2, letterSpacing: "-0.01em", color: "#1a1814" }}>
             Vad som fungerade och vad vi lärde oss
@@ -267,8 +267,8 @@ export default function Cykelappen() {
       </section>
 
       {/* Reflektion */}
-      <section style={{ padding: "4rem clamp(1.5rem, 5vw, 4rem)", maxWidth: "1320px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 3fr", gap: "4rem", alignItems: "start", borderBottom: "1px solid #e2ded9" }}>
-        <div style={{ position: "sticky", top: "calc(4rem + 1.5rem)" }}>
+      <section className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-8 md:gap-16" style={{ padding: "4rem clamp(1.5rem, 5vw, 4rem)", maxWidth: "1320px", margin: "0 auto", alignItems: "start", borderBottom: "1px solid #e2ded9" }}>
+        <div className="static md:sticky md:top-[calc(4rem+1.5rem)]">
           <p style={{ fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8633a", marginBottom: "0.75rem" }}>Reflektion</p>
           <h2 style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: "clamp(1.375rem, 2vw, 2rem)", fontWeight: 300, lineHeight: 1.2, letterSpacing: "-0.01em", color: "#1a1814" }}>
             Vad jag tar med mig
@@ -290,7 +290,7 @@ export default function Cykelappen() {
       </section>
 
       {/* Footer */}
-      <footer style={{ padding: "2rem clamp(1.5rem, 5vw, 4rem)", borderTop: "1px solid #e2ded9", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+      <footer className="flex-col sm:flex-row justify-between items-start sm:items-center gap-4" style={{ padding: "2rem clamp(1.5rem, 5vw, 4rem)", borderTop: "1px solid #e2ded9", display: "flex" }}>
         <span style={{ fontSize: "0.75rem", fontWeight: 400, color: "#7a7570", letterSpacing: "0.05em" }}>2026 Petra Frisk</span>
         <Link href="/" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", padding: "0.75rem 2rem", background: "transparent", color: "#1a1814", border: "1.5px solid #e2ded9", borderRadius: "2px", fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.06em", textTransform: "uppercase", textDecoration: "none" }}>
           ← Tillbaka till projekt

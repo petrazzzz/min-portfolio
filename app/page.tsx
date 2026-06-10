@@ -37,30 +37,29 @@ export default function Home() {
         background: "rgba(255,255,255,0.92)", backdropFilter: "blur(12px)",
         boxShadow: "0 1px 0 #e2ded9", zIndex: 100, boxSizing: "border-box"
       }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "1.25rem" }}>
-          <span style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: "1.125rem", fontWeight: 400, letterSpacing: "0.02em", fontStyle: "normal" }}>Petra Frisk / Portfolio</span>
-          <span style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.06em", textTransform: "uppercase", color: "#7a7570", border: "1px solid #e2ded9", borderRadius: "999px", padding: "0.3rem 0.85rem" }}>
+        <div className="flex items-center gap-2 sm:gap-5">
+          <span className="text-xs sm:text-sm md:text-base lg:text-lg" style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontWeight: 400, letterSpacing: "0.02em", fontStyle: "normal" }}>Petra Frisk / Portfolio</span>
+          <span className="hidden sm:flex" style={{ alignItems: "center", gap: "0.4rem", fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.06em", textTransform: "uppercase", color: "#7a7570", border: "1px solid #e2ded9", borderRadius: "999px", padding: "0.3rem 0.85rem" }}>
             <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#4caf50", display: "inline-block", flexShrink: 0 }} />
             öppen för LIA
           </span>
         </div>
-        <div style={{ display: "flex", gap: "2rem" }}>
+        <div className="flex gap-3 sm:gap-8">
           {[["Om mig", "#ommig"], ["Projekt", "#projekt"], ["Kontakt", "#kontakt"]].map(([label, href]) => (
-            <a key={label} href={href} className="nav-link">{label}</a>
+            <a key={label} href={href} className="nav-link text-xs sm:text-sm">{label}</a>
           ))}
         </div>
       </nav>
 
       {/* Hero */}
-      <section style={{
+      <section className="flex-col md:flex-row gap-10 md:gap-16" style={{
         minHeight: "100vh",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
         padding: "7rem clamp(1.5rem, 5vw, 4rem) 4rem",
         maxWidth: "1320px",
-        margin: "0 auto",
-        gap: "4rem"
+        margin: "0 auto"
       }}>
         <div style={{ flex: 1, minWidth: 0 }}>
           <p style={{ fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8633a", marginBottom: "2rem", display: "flex", alignItems: "center", gap: "0.6rem", animation: "fadeUp 0.8s ease both" }}>
@@ -68,9 +67,8 @@ export default function Home() {
             UX-designstudent
           </p>
 
-          <h1 style={{
-            fontFamily: "var(--font-cormorant), Georgia, serif",
-            fontSize: "clamp(3.5rem, 7vw, 6rem)", fontWeight: 300,
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl" style={{
+            fontFamily: "var(--font-cormorant), Georgia, serif", fontWeight: 300,
             lineHeight: 1.05, margin: "0 0 2rem", letterSpacing: "-0.02em",
             animation: "fadeUp 0.8s ease 0.15s both"
           }}>
@@ -82,7 +80,7 @@ export default function Home() {
             Jag studerar UX-design och skapar upplevelser som känns intuitiva – från research till färdig prototyp.
           </p>
 
-          <div style={{ display: "flex", alignItems: "center", gap: "2rem", animation: "fadeUp 0.8s ease 0.45s both" }}>
+          <div className="flex-wrap gap-4 sm:gap-8" style={{ display: "flex", alignItems: "center", animation: "fadeUp 0.8s ease 0.45s both" }}>
             <a href="#projekt" className="btn-primary">Se mina projekt</a>
             <a href="#kontakt" style={{ fontSize: "0.875rem", fontWeight: 400, color: "#1a1814", textDecoration: "none", borderBottom: "1px solid #1a1814", paddingBottom: "2px" }}>Kontakta mig →</a>
           </div>
@@ -105,7 +103,7 @@ export default function Home() {
           <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#c8633a", display: "inline-block", flexShrink: 0 }} />
           Om mig
         </p>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "start" }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16" style={{ alignItems: "start" }}>
           <div className="fade-up">
             <h2 style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: "clamp(1.5rem, 2.5vw, 2.2rem)", fontWeight: 300, lineHeight: 1.2, margin: "0 0 1.5rem", letterSpacing: "-0.01em", color: "#1a1814" }}>
               Jag trivs i hela <em style={{ fontStyle: "italic", color: "#c8633a" }}>processen</em>
@@ -117,7 +115,7 @@ export default function Home() {
               Läs mer om utbildningen →
             </a>
           </div>
-          <div className="fade-up" style={{ borderLeft: "1px solid #e2ded9", paddingLeft: "4rem" }}>
+          <div className="fade-up border-t md:border-t-0 md:border-l border-[#e2ded9] pt-12 md:pt-0 md:pl-16">
             <p style={{ fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8633a", marginBottom: "1.5rem" }}>
               Kompetenser
             </p>
@@ -139,9 +137,9 @@ export default function Home() {
           <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#c8633a", display: "inline-block", flexShrink: 0 }} />
           Projekt
         </p>
-        <div style={{ maxWidth: "800px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem" }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8" style={{ maxWidth: "800px" }}>
           <a href="/tbn" className="projekt-kort" style={{ textDecoration: "none", color: "inherit", display: "block", border: "1px solid #e2ded9", borderRadius: "6px", overflow: "hidden" }}>
-            <div style={{ overflow: "hidden", height: "340px" }}>
+            <div className="h-[260px] sm:h-[340px]" style={{ overflow: "hidden" }}>
               <Image
                 src="/tbn_startsida.png"
                 alt="TBN Atlantic Rainforest"
@@ -159,7 +157,7 @@ export default function Home() {
             </div>
           </a>
           <a href="/cykelappen" className="projekt-kort" style={{ textDecoration: "none", color: "inherit", display: "block", border: "1px solid #e2ded9", borderRadius: "6px", overflow: "hidden" }}>
-            <div style={{ overflow: "hidden", height: "340px" }}>
+            <div className="h-[260px] sm:h-[340px]" style={{ overflow: "hidden" }}>
               <Image
                 src="/cykel_startsida.png"
                 alt="Cykelappen"
@@ -185,7 +183,7 @@ export default function Home() {
           <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#c8633a", display: "inline-block", flexShrink: 0 }} />
           Kontakt
         </p>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "center" }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16" style={{ alignItems: "center" }}>
           <div className="fade-up">
             <h2 style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: "clamp(1.5rem, 2.5vw, 2.2rem)", fontWeight: 300, margin: 0, lineHeight: 1.2, letterSpacing: "-0.01em" }}>
               Låt oss skapa något<br /><em style={{ fontStyle: "italic", color: "#c8633a" }}>tillsammans</em>
@@ -195,7 +193,7 @@ export default function Home() {
             <p style={{ fontSize: "clamp(1rem, 1.4vw, 1.125rem)", fontWeight: 300, color: "#7a7570", lineHeight: 1.7, marginBottom: "2.5rem" }}>
               Jag söker LIA inom UX/tjänstedesign hösten 2026 (28 sept–20 nov). Nyfiken på att samarbeta? Hör av dig så berättar jag mer.
             </p>
-            <div style={{ display: "flex", gap: "1rem" }}>
+            <div className="flex-wrap gap-4" style={{ display: "flex" }}>
               <a href="mailto:petra.frisk@stud.sti.se" className="btn-primary">Maila mig</a>
               <a href="https://www.linkedin.com/in/petra-frisk-35428014a/" target="_blank" rel="noopener noreferrer" className="btn-primary">LinkedIn</a>
             </div>
