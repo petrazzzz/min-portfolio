@@ -170,6 +170,24 @@ export default function Home() {
               <p className="projekt-beskrivning" style={{ fontSize: "0.875rem", fontWeight: 300, margin: 0, lineHeight: 1.7 }}>En app som gör cyklingen enklare, tryggare och mer inkluderande – för alla.</p>
             </div>
           </a>
+          <a href="/streamly" className="projekt-kort" style={{ textDecoration: "none", color: "inherit", display: "block", border: "1px solid #e2ded9", borderRadius: "6px", overflow: "hidden" }}>
+            <div className="h-[260px] sm:h-[340px]" style={{ overflow: "hidden" }}>
+              <Image
+                src="/streamly_startsida.png"
+                alt="Streamly"
+                className="projekt-bild"
+                width={1200}
+                height={800}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              />
+            </div>
+            <div style={{ padding: "1.5rem" }}>
+              <p style={{ fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8633a", margin: "0 0 0.5rem" }}>Datavisualisering · Dashboard-design</p>
+              <h3 className="projekt-titel" style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: "1.5rem", fontWeight: 400, margin: "0 0 0.5rem" }}>Streamly</h3>
+              <p className="projekt-beskrivning" style={{ fontSize: "0.875rem", fontWeight: 300, margin: 0, lineHeight: 1.7 }}>Ett dashboard som gör film- och seriedata från streamingtjänster överskådligt.</p>
+            </div>
+          </a>
         </div>
       </section>
 
