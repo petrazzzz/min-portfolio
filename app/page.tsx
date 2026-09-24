@@ -39,10 +39,6 @@ export default function Home() {
       }}>
         <div className="flex items-center gap-2 sm:gap-5">
           <span className="text-xs sm:text-sm md:text-base lg:text-lg" style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontWeight: 400, letterSpacing: "0.02em", fontStyle: "normal" }}>Petra Frisk / Portfolio</span>
-          <span className="hidden sm:flex" style={{ alignItems: "center", gap: "0.4rem", fontSize: "0.75rem", fontWeight: 400, letterSpacing: "0.06em", textTransform: "uppercase", color: "#7a7570", border: "1px solid #e2ded9", borderRadius: "999px", padding: "0.3rem 0.85rem" }}>
-            <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#4caf50", display: "inline-block", flexShrink: 0 }} />
-            öppen för LIA
-          </span>
         </div>
         <div className="flex gap-3 sm:gap-8">
           {[["Om mig", "#ommig"], ["Projekt", "#projekt"], ["Kontakt", "#kontakt"]].map(([label, href]) => (
